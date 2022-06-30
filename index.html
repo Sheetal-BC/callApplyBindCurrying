@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+// Question 1
+
+// var obj = {
+//     num:5
+// };
+// var sum = function(a){
+//     return this.num+a;
+// }
+// console.log(sum.call(obj, 3));
+
+// // Question 2
+
+// var obj = {
+//     num:5
+// };
+// var sum = function(a,b){
+//    return this.num + a + b;
+// }
+// let arr = [2,4]
+// console.log(sum.apply(obj,arr));
+
+// // Question-3
+
+// var obj = {
+//     num:5
+// };
+// var sum = function(a,b){
+//     return this.num + a + b;
+// }
+// let bound = sum.bind(obj);
+// console.log(bound(5,6));
+
+// Question 4
+
+// let Student = {
+//     age:20
+// }
+
+// let printAge = function(){
+//   return this.age
+// }
+// let bound = printAge.bind(Student);
+// console.log(bound());
+
+        // function currying using bind method
+    //     let multiply =function(x,y){
+    //         console.log(x*y);
+    //     }
+    //     let multiplyByTwo = multiply.bind(this, 2);
+    // multiplyByTwo(5);
+
+    // let multiplyByThree = multiply.bind(this, 3);
+    // multiplyByThree(5);
+    
+    //  function currying using closure method
+    let multiply =function(x){
+        return function(y){
+            console.log(x*y);
+        }
+        }
+        let multiplyByTwo = multiply(2);
+    multiplyByTwo(5);
+
+    let multiplyByThree = multiply(3);
+    multiplyByThree(5);
+
+
+    </script>
+   
+</body>
+</html>
